@@ -67,9 +67,9 @@ public class GetBieresServices extends IntentService {
 
     protected void handleActionBiers(){
         Log.d(TAG, "Thread service name:" + Thread.currentThread().getName());
-        URL url = null;
+        URL url;
         try{
-            url = new URL("http://tools.wmflabs.org/heritage/api/api.php?action=search&srcountry=fr&srlang=fr&srmunicipality=[[Paris]]&format=json");
+            url = new URL("https://api.myjson.com/bins/wa79x");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
