@@ -10,8 +10,4 @@
     <item android:id="@+id/notif" android:title="Notif">
     </item>
 
-    <item android:id="@+id/ne" android:title="New">
-    </item>
-
-
 </menu>

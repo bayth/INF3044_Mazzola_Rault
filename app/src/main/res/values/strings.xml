@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="text_view">Hello Word !</string>
-    <string name="toasttext">Je suis un toast !</string>
+    <string name="app_name">World Discover</string>
+    <string name="Country">Liste des Pays</string>
+    <string name="toasttext">On y va !</string>
+    <string name="Welcome"> Bienvenue sur notre application. Notre application a pour but de vous faire découvrir
+    les merveilles des villes du monde ! </string>
 </resources>

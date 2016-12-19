@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="textview">Hello Word !</string>
+    <string name="app_name">World Discover</string>
+    <string name="Country">List of Countries</string>
+    <string name="toasttext">Here we go! !</string>
+    <string name="Welcome">Welcome to our application. Our application aims at making discover you the marvels of the cities in the world!</string>
 </resources>

@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         btn_hw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
                 Toast.makeText(MainActivity.this, getString(R.string.toasttext), Toast.LENGTH_SHORT).show();
             }
         });
@@ -60,10 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 mBuilder.setContentIntent(resultPendingIntent);
                 NotificationManager mNotificationManager = (NotificationManager) getSystemService(MainActivity.NOTIFICATION_SERVICE);
                 mNotificationManager.notify(0, mBuilder.build());
-                return true;
-            case R.id.ne :
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(intent);
                 return true;
         }
         return false;

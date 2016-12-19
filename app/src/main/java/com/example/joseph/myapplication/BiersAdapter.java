@@ -1,13 +1,22 @@
 package com.example.joseph.myapplication;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.w3c.dom.Text;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by Joseph on 15/11/2016.
@@ -34,6 +43,19 @@ public class BiersAdapter extends RecyclerView.Adapter<BiersAdapter.BierHolder> 
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        holder.name.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                TextView tp = (TextView) v.findViewById(R.id.rv_bier_element_name);
+                Log.d(TAG, tp.toString());
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q="+tp.getText().toString());
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                v.getContext().startActivity(mapIntent);
+            }
+        });
     }
 
     @Override
@@ -44,6 +66,8 @@ public class BiersAdapter extends RecyclerView.Adapter<BiersAdapter.BierHolder> 
             return biers.length();
         }
     }
+
+
 
     class BierHolder extends RecyclerView.ViewHolder{
 

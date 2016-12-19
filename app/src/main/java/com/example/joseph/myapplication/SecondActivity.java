@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.net.sip.SipAudioCall;
 import android.nfc.Tag;
 import android.support.v4.content.LocalBroadcastManager;
@@ -89,4 +90,5 @@ public class SecondActivity extends AppCompatActivity {
             return new JSONArray();
         }
     }
+
 }
